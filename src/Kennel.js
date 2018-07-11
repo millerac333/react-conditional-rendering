@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import EmployeeList from "./EmployeeList"
 import LocationList from "./LocationList"
+import AnimalList from "./AnimalList"
 
 export default class Kennel extends Component {
 
