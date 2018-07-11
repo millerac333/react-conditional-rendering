@@ -14,6 +14,13 @@ export default class Kennel extends Component {
         locations: [
             { name: "Nashville North" },
             { name: "Nashville South" }
+        ],
+        animals: [
+            { name: "Jisie the Giraffe" },
+            { name: "Jordan the Jackal" },
+            { name: "Emily the Emu" },
+            { name: "Steve the Starfish" },
+            { name: "John the Swan" }
         ]
     }
 
@@ -22,10 +29,10 @@ export default class Kennel extends Component {
             <React.Fragment>
                 <LocationList locations={this.state.locations} />
                 <EmployeeList employees={this.state.employees} />
+                <AnimalList animals={this.state.animals} />
             </React.Fragment>
         );
     }
 }
 
 
-// Update your application so that the array of locations is passed from the Kennel state to the props of LocationList. Then use the map() method to display all location names.
