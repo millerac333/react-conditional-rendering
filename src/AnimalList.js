@@ -13,13 +13,15 @@ export default class AnimalList extends Component {
     };
     render() {
         return (
-            <ul>
-                {
-                    this.state.animals.map(animal => {
-                        return <Animal animal={animal} key={animal.id} />
-                    })
-                }
-            </ul>
+            <React.Fragment>
+                <ul>
+                    {
+                        this.state.animals.map(animal => {
+                            return <Animal animal={animal} key={animal.id} />
+                        })
+                    }
+                </ul>
+            </React.Fragment>
         )
     }
 }

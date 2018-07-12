@@ -11,13 +11,15 @@ export default class LocationList extends Component {
     };
     render() {
         return (
-            <ul>
-                {
-                    this.state.locations.map(location => {
-                        return <Location location={location} key={location.id} />
-                    })
-                }
-            </ul>
+            <React.Fragment>
+                <ul>
+                    {
+                        this.state.locations.map(location => {
+                            return <Location location={location} key={location.id} />
+                        })
+                    }
+                </ul>
+            </React.Fragment>
         )
     }
 }

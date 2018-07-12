@@ -13,13 +13,15 @@ export default class EmployeeList extends Component {
     };
     render() {
         return (
-            <ul>
-                {
-                    this.state.employees.map(employee => {
-                        return <Employee employee={employee} key={employee.id} />
-                    })
-                }
-            </ul>
+            <React.Fragment>
+                <ul>
+                    {
+                        this.state.employees.map(employee => {
+                            return <Employee employee={employee} key={employee.id} />
+                        })
+                    }
+                </ul>
+            </React.Fragment>
         )
     }
 }
