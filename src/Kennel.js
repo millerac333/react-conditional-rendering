@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import EmployeeList from "./EmployeeList"
 import LocationList from "./LocationList"
-import AnimalList from "./AnimalList"
+
 
 export default class Kennel extends Component {
 
@@ -15,13 +15,6 @@ export default class Kennel extends Component {
         locations: [
             { name: "Nashville North" },
             { name: "Nashville South" }
-        ],
-        animals: [
-            { name: "Jisie the Giraffe" },
-            { name: "Jordan the Jackal" },
-            { name: "Emily the Emu" },
-            { name: "Steve the Starfish" },
-            { name: "John the Swan" }
         ]
     }
 
@@ -29,8 +22,7 @@ export default class Kennel extends Component {
         return (
             <React.Fragment>
                 <LocationList locations={this.state.locations} />
-                <EmployeeList employees={this.state.employees} />
-                <AnimalList animals={this.state.animals} />
+                <EmployeeList employee={this.state.employees} />
             </React.Fragment>
         );
     }
