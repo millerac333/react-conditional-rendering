@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Animal from "./Animal"
 
 export default class AnimalList extends Component {
     state = {
@@ -12,11 +13,13 @@ export default class AnimalList extends Component {
     };
     render() {
         return (
-            <React.Fragment>
-                <ul>
-                    {this.state.animals.map(animal => <li key={animal.id}>{animal.name}</li>)}
-                </ul>
-            </React.Fragment>
+            <ul>
+                {
+                    this.state.animals.map(animal => {
+                        return <Animal animal={animal} key={animal.id} />
+                    })
+                }
+            </ul>
         )
     }
 }
