@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Employee from "./Employee"
 
 
 export default class EmployeeList extends Component {
@@ -12,11 +13,13 @@ export default class EmployeeList extends Component {
     };
     render() {
         return (
-            <React.Fragment>
-                <ul>
-                    {this.state.employees.map(employee => <li key={employee.id}>{employee.name}</li>)}
-                </ul>
-            </React.Fragment>
+            <ul>
+                {
+                    this.state.employees.map(employee => {
+                        return <Employee employee={employee} key={employee.id} />
+                    })
+                }
+            </ul>
         )
     }
 }
