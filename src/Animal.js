@@ -11,8 +11,8 @@ export default props => {
         <Link
           className="card-link"
           to={{
-            pathname: `/animals/${animal.id}`,
-            state: { animal: animal }
+            pathname: `/animals/${props.animal.id}`,
+            state: { animal: props.animal }
           }}
         >
           Details
