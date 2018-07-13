@@ -6,8 +6,12 @@ import EmployeeList from "./EmployeeList";
 import Animal from "./Animal";
 import Employee from "./Employee";
 import Location from "./Location";
+import Login from "./Login";
 
 export default class ApplicationViews extends Component {
+  // Check if credentials are in local storage
+  isAuthenticated = () => localStorage.getItem("credentials") !== null;
+
   render() {
     return (
       <React.Fragment>
@@ -32,6 +36,7 @@ export default class ApplicationViews extends Component {
             return <Employee employee={props.location.state.employee} />;
           }}
         />
+        <Route path="/login" component={Login} />
       </React.Fragment>
     );
   }
